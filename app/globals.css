@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-foreground;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.glass-panel {
+  @apply bg-surface/80 backdrop-blur-md border border-surfaceBorder shadow-sm;
+}
+
+/* Custom pattern for Ethiopian/Eritrean Tibeb */
+.tibeb-pattern {
+  background-image: repeating-linear-gradient(
+    45deg,
+    #009a44 0px, /* Green */
+    #009a44 10px,
+    #fcd116 10px, /* Yellow */
+    #fcd116 20px,
+    #ce1126 20px, /* Red */
+    #ce1126 30px,
+    #0072c6 30px, /* Blue (Eritrea/Ethiopia accents) */
+    #0072c6 40px
+  );
+  background-size: 56px 56px;
+}

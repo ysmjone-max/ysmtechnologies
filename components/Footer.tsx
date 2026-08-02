@@ -21,7 +21,7 @@ export default function Footer() {
           <a href="https://github.com/ysmjone-max" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
             <Github size={24} />
           </a>
-          <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+          <a href="https://www.linkedin.com/in/yohannes-molla-2022baledelu/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
             <Linkedin size={24} />
           </a>
           <a href="#" className="text-gray-400 hover:text-primary transition-colors">

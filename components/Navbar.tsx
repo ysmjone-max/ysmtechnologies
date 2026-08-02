@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
-import logo from '../YSM LOGO.png'
+import logo from '../ysm-logo.png'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)

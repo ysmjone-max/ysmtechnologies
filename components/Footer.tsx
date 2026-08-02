@@ -1,6 +1,6 @@
 import { Github, Twitter, Linkedin } from 'lucide-react'
 import Image from 'next/image'
-import logo from '../YSM LOGO.png'
+import logo from '../ysm-logo.png'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

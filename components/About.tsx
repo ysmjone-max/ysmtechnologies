@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
 import Image from 'next/image'
-import logo from '../YSM LOGO.png'
+import logo from '../ysm-logo.png'
 
 export default function About() {
   const highlights = [

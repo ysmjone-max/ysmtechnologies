@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import logo from '../YSM LOGO.png'
+import logo from '../ysm-logo.png'
 
 export default function SplashScreen() {
   const [show, setShow] = useState(true)

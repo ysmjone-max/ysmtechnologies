@@ -22,12 +22,12 @@ export default function About() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="w-full md:w-1/2"
+            className="w-full md:w-1/2 flex justify-center"
           >
-            <div className="relative">
+            <div className="relative w-full max-w-[250px] md:max-w-none">
               <div className="absolute -inset-4 bg-gradient-to-r from-primary to-green-500 rounded-2xl blur-lg opacity-20"></div>
-              <div className="relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden bg-surface flex items-center justify-center border border-surfaceBorder shadow-lg">
-                 <Image src={logo} alt="YSM Technologies Badge" width={300} height={300} className="object-contain" />
+              <div className="relative aspect-square md:aspect-[4/3] rounded-2xl overflow-hidden bg-surface flex items-center justify-center border border-surfaceBorder shadow-lg p-6 md:p-0">
+                 <Image src={logo} alt="YSM Technologies Badge" width={300} height={300} className="object-contain w-full h-auto" />
               </div>
             </div>
           </motion.div>

@@ -25,10 +25,10 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-surface/90 backdrop-blur-md border-b border-surfaceBorder py-0 md:py-0' : 'bg-transparent py-0 md:py-1'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-surface/90 backdrop-blur-md border-b border-surfaceBorder py-2 md:py-3' : 'bg-transparent py-3 md:py-4'}`}>
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
-        <a href="#" className="flex items-center">
-           <Image src={logo} alt="YSM Technologies Logo" width={160} height={160} className="-my-6 md:-my-12 w-32 md:w-[160px] h-auto object-contain mix-blend-multiply" />
+        <a href="#" className="flex items-center justify-center relative w-24 h-10 md:w-[140px] md:h-12 overflow-hidden">
+           <Image src={logo} alt="YSM Technologies Logo" fill className="object-cover object-center mix-blend-multiply" />
         </a>
 
         {/* Desktop Nav */}

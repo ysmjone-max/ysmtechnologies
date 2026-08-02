@@ -37,7 +37,7 @@ export default function SplashScreen() {
               alt="YSM Technologies Logo" 
               width={250} 
               height={100} 
-              className="object-contain w-48 md:w-64 h-auto" 
+              className="mix-blend-multiply object-contain w-48 md:w-64 h-auto" 
               priority
             />
           </motion.div>

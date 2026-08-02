@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="container mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
         <div className="flex flex-col items-center md:items-start text-center md:text-left">
           <div className="mb-4">
-             <Image src={logo} alt="YSM Technologies Logo" width={120} height={35} className="object-contain" />
+             <Image src={logo} alt="YSM Technologies Logo" width={120} height={35} className="object-contain mix-blend-multiply" />
           </div>
           <p className="text-gray-500 text-sm font-medium">
             © {currentYear} YSM Technologies. All rights reserved.

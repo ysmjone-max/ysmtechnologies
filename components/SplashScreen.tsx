@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion'
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
-import logo from '../7.png'
+import logo from '../YSM LOGO.png'
 
 export default function SplashScreen() {
   const [show, setShow] = useState(true)
@@ -37,7 +37,7 @@ export default function SplashScreen() {
               alt="YSM Technologies Logo" 
               width={250} 
               height={100} 
-              className="mix-blend-multiply object-contain w-48 md:w-64 h-auto" 
+              className="object-contain w-48 md:w-64 h-auto" 
               priority
             />
           </motion.div>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
-import logo from '../7.png'
+import logo from '../YSM LOGO.png'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -28,7 +28,7 @@ export default function Navbar() {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-surface/90 backdrop-blur-md border-b border-surfaceBorder py-2 md:py-3' : 'bg-transparent py-4 md:py-5'}`}>
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         <a href="#" className="flex items-center">
-           <Image src={logo} alt="YSM Technologies Logo" width={140} height={40} className="w-24 md:w-[140px] h-auto object-contain mix-blend-multiply" />
+           <Image src={logo} alt="YSM Technologies Logo" width={140} height={40} className="w-24 md:w-[140px] h-auto object-contain" />
         </a>
 
         {/* Desktop Nav */}

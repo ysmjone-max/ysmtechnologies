@@ -1,62 +1,59 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Smartphone } from 'lucide-react'
-
-const projects = [
-  {
-    title: "Mezgeb Financial App",
-    category: "Web & Native Android App",
-    description: "A comprehensive personal financial tracking application. Built as both a responsive web app and a high-performance native Android application to help users manage their finances seamlessly across devices.",
-    tech: ["Next.js", "Android SDK", "TailwindCSS"],
-    link: "https://mezgeb.it/",
-    isLive: true,
-    hasAndroid: true,
-  },
-  {
-    title: "Saha Heating & Plumbing",
-    category: "Client Website",
-    description: "A professional, high-converting service website for a plumbing and heating company based in the UK. Designed to generate leads and showcase services with a modern, responsive layout.",
-    tech: ["React", "TailwindCSS", "Framer Motion"],
-    link: "https://sahaheating.com/",
-    isLive: true,
-  },
-  {
-    title: "Tolo12 Services",
-    category: "Client Website",
-    description: "A custom service-based business platform designed to highlight core offerings and streamline customer inquiries with an intuitive UI and fast load times.",
-    tech: ["Next.js", "TailwindCSS"],
-    link: "https://tolo12.com/",
-    isLive: true,
-  },
-  {
-    title: "Habesha Restaurant",
-    category: "Client Website",
-    description: "A visually appealing and responsive restaurant website showcasing traditional cuisine, menus, and business details, deployed via GitHub Pages.",
-    tech: ["HTML", "CSS", "JavaScript"],
-    link: "https://ysmjone-max.github.io/Habesharestorant/#about",
-    isLive: true,
-  }
-]
+import { ExternalLink, Smartphone } from 'lucide-react'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Portfolio() {
+  const { t } = useLanguage()
+
+  const projects = [
+    {
+      title: t('portfolio.p1Title'),
+      category: t('portfolio.p1Category'),
+      description: t('portfolio.p1Desc'),
+      tech: ["Next.js", "Android SDK", "TailwindCSS"],
+      link: "https://mezgeb.it/",
+      isLive: true,
+      hasAndroid: true,
+    },
+    {
+      title: t('portfolio.p2Title'),
+      category: t('portfolio.p2Category'),
+      description: t('portfolio.p2Desc'),
+      tech: ["React", "TailwindCSS", "Framer Motion"],
+      link: "https://sahaheating.com/",
+      isLive: true,
+    },
+    {
+      title: t('portfolio.p3Title'),
+      category: t('portfolio.p3Category'),
+      description: t('portfolio.p3Desc'),
+      tech: ["Next.js", "TailwindCSS"],
+      link: "https://tolo12.com/",
+      isLive: true,
+    },
+    {
+      title: t('portfolio.p4Title'),
+      category: t('portfolio.p4Category'),
+      description: t('portfolio.p4Desc'),
+      tech: ["HTML", "CSS", "JavaScript"],
+      link: "https://ysmjone-max.github.io/Habesharestorant/#about",
+      isLive: true,
+    }
+  ]
+
   return (
     <section id="portfolio" className="py-24 relative bg-white">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-heading font-extrabold mb-6 text-foreground">
-              Featured <span className="text-primary">Projects</span>
+              {t('portfolio.title1')} <span className="text-primary">{t('portfolio.title2')}</span>
             </h2>
             <p className="text-gray-600 text-lg font-medium">
-              A selection of my recent work, ranging from bespoke client websites to robust native Android applications.
+              {t('portfolio.subtitle')}
             </p>
-          </div>
-          <div className="mt-6 md:mt-0">
-            <a href="https://github.com/ysmjone-max" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors">
-              <Github size={20} />
-              <span className="font-bold">View GitHub Profile</span>
-            </a>
           </div>
         </div>
 

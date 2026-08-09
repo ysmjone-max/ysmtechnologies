@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Code, Smartphone } from 'lucide-react'
 import CulturalBackground from './CulturalBackground'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Hero() {
+  const { t } = useLanguage()
+
   return (
     <>
       <section className="relative min-h-[90vh] flex items-center justify-center pt-24 overflow-hidden bg-gradient-to-b from-blue-50/50 to-background">
@@ -25,23 +28,23 @@ export default function Hero() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
               </span>
-              Available for new projects
+              {t('hero.availability')}
             </div>
             
             <h1 className="text-5xl md:text-7xl font-heading font-extrabold tracking-tight mb-6 leading-tight text-foreground">
-              Building Digital Experiences That <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-green-600">Convert.</span>
+              {t('hero.title1')} {t('hero.title2')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-green-600">{t('hero.title3')}</span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-medium">
-              Senior Full-Stack Developer & UI/UX Designer specializing in high-performance web applications, custom websites, and native Android apps.
+              {t('hero.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a href="#portfolio" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-[0_8px_30px_rgb(0,116,199,0.3)] hover:shadow-[0_8px_30px_rgb(0,116,199,0.5)] hover:-translate-y-1">
-                View My Work <ArrowRight size={18} />
+                {t('hero.viewWork')} <ArrowRight size={18} />
               </a>
               <a href="#contact" className="w-full sm:w-auto px-8 py-4 bg-white border-2 border-surfaceBorder text-foreground font-bold rounded-full hover:border-primary/30 hover:bg-blue-50 transition-all hover:-translate-y-1">
-                Let's Talk
+                {t('hero.letsTalk')}
               </a>
             </div>
           </motion.div>
@@ -55,11 +58,11 @@ export default function Hero() {
           >
             <div className="flex flex-col items-center gap-2 hover:text-primary transition-colors cursor-default">
               <Code size={28} />
-              <span className="text-sm font-bold tracking-wide">WEB DEV</span>
+              <span className="text-sm font-bold tracking-wide">{t('hero.webDev')}</span>
             </div>
             <div className="flex flex-col items-center gap-2 hover:text-primary transition-colors cursor-default">
               <Smartphone size={28} />
-              <span className="text-sm font-bold tracking-wide">ANDROID APPS</span>
+              <span className="text-sm font-bold tracking-wide">{t('hero.androidApps')}</span>
             </div>
           </motion.div>
         </div>

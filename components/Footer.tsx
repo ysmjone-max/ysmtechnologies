@@ -1,9 +1,13 @@
-import { Github, Twitter, Linkedin } from 'lucide-react'
+'use client'
+
+import { Linkedin, Mail } from 'lucide-react'
 import Image from 'next/image'
 import logo from '../ysm-logo.png'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
+  const { t } = useLanguage();
   
   return (
     <footer className="bg-white border-t border-surfaceBorder py-12">
@@ -13,19 +17,16 @@ export default function Footer() {
              <Image src={logo} alt="YSM Technologies Logo" width={120} height={35} className="object-contain mix-blend-multiply" />
           </div>
           <p className="text-gray-500 text-sm font-medium">
-            © {currentYear} YSM Technologies. All rights reserved.
+            {t('footer.rights', { year: currentYear.toString() })}
           </p>
         </div>
         
         <div className="flex gap-6 justify-center">
-          <a href="https://github.com/ysmjone-max" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
-            <Github size={24} />
+          <a href="mailto:info@ysm-technologies.com" className="text-gray-400 hover:text-primary transition-colors">
+            <Mail size={24} />
           </a>
           <a href="https://www.linkedin.com/in/yohannes-molla-2022baledelu/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
             <Linkedin size={24} />
-          </a>
-          <a href="#" className="text-gray-400 hover:text-primary transition-colors">
-            <Twitter size={24} />
           </a>
         </div>
       </div>

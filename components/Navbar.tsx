@@ -4,10 +4,13 @@ import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
 import logo from '../ysm-logo.png'
+import LanguageSwitcher from './LanguageSwitcher'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,10 +21,10 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Portfolio', href: '#portfolio' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.services'), href: '#services' },
+    { name: t('nav.portfolio'), href: '#portfolio' },
+    { name: t('nav.contact'), href: '#contact' },
   ]
 
   return (
@@ -32,21 +35,25 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {navLinks.map((link) => (
             <a key={link.name} href={link.href} className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">
               {link.name}
             </a>
           ))}
+          <LanguageSwitcher />
           <a href="#contact" className="px-6 py-2.5 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-all shadow-[0_4px_14px_0_rgba(0,116,199,0.39)] hover:shadow-[0_6px_20px_rgba(0,116,199,0.23)] hover:-translate-y-0.5">
-            Get a Quote
+            {t('nav.getQuote')}
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button className="md:hidden text-foreground focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
-          {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
-        </button>
+        {/* Mobile Nav Header items */}
+        <div className="md:hidden flex items-center gap-4">
+          <LanguageSwitcher />
+          <button className="text-foreground focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Nav */}
@@ -58,7 +65,7 @@ export default function Navbar() {
             </a>
           ))}
           <a href="#contact" onClick={() => setIsMenuOpen(false)} className="px-6 py-3 text-center bg-primary text-white font-semibold rounded-lg shadow-md">
-            Get a Quote
+            {t('nav.getQuote')}
           </a>
         </div>
       )}

@@ -1,10 +1,13 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Send, Phone, Mail, MapPin } from 'lucide-react'
+import { Send, Phone, Mail } from 'lucide-react'
 import CulturalBackground from './CulturalBackground'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function Contact() {
+  const { t } = useLanguage()
+
   return (
     <>
       <section id="contact" className="py-24 relative overflow-hidden bg-background border-t border-surfaceBorder">
@@ -21,10 +24,10 @@ export default function Contact() {
                 transition={{ duration: 0.6 }}
               >
                 <h2 className="text-3xl md:text-5xl font-heading font-extrabold mb-6 text-foreground">
-                  Let's Build Something <span className="text-primary">Great.</span>
+                  {t('contact.title1')} <span className="text-primary">{t('contact.title2')}</span>
                 </h2>
                 <p className="text-gray-600 text-lg mb-10 max-w-lg leading-relaxed font-medium">
-                  Whether you need a custom website for your local business, a complex web application, or a native Android app, I'm ready to bring your vision to life.
+                  {t('contact.subtitle')}
                 </p>
                 
                 <div className="space-y-6">
@@ -33,20 +36,20 @@ export default function Contact() {
                       <Phone size={24} />
                     </div>
                     <div>
-                      <h4 className="text-foreground font-extrabold text-lg">WhatsApp</h4>
-                      <p className="text-gray-500 text-sm font-medium">Direct message for instant replies</p>
+                      <h4 className="text-foreground font-extrabold text-lg">{t('contact.whatsappTitle')}</h4>
+                      <p className="text-gray-500 text-sm font-medium">{t('contact.whatsappDesc')}</p>
                     </div>
                   </a>
 
-                  <div className="flex items-center gap-4 p-4 bg-white border border-surfaceBorder rounded-xl hover:border-green-500/50 shadow-sm hover:shadow-md transition-all group">
+                  <a href="mailto:info@ysm-technologies.com" className="flex items-center gap-4 p-4 bg-white border border-surfaceBorder rounded-xl hover:border-green-500/50 shadow-sm hover:shadow-md transition-all group">
                     <div className="w-12 h-12 bg-green-50 rounded-full flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-colors">
                       <Mail size={24} />
                     </div>
                     <div>
-                      <h4 className="text-foreground font-extrabold text-lg">Email</h4>
-                      <p className="text-gray-500 text-sm font-medium">Setup via Web3Forms coming soon</p>
+                      <h4 className="text-foreground font-extrabold text-lg">{t('contact.emailTitle')}</h4>
+                      <p className="text-gray-500 text-sm font-medium">info@ysm-technologies.com</p>
                     </div>
-                  </div>
+                  </a>
                 </div>
               </motion.div>
             </div>
@@ -59,33 +62,33 @@ export default function Contact() {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="bg-white border border-surfaceBorder shadow-lg p-8 md:p-10 rounded-2xl relative"
               >
-                <h3 className="text-2xl font-extrabold text-foreground mb-6">Request a Quote</h3>
+                <h3 className="text-2xl font-extrabold text-foreground mb-6">{t('contact.reqQuote')}</h3>
                 <form className="space-y-6" action="#" method="POST" onSubmit={(e) => e.preventDefault()}>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-gray-700">Name</label>
-                      <input type="text" className="w-full bg-background border border-surfaceBorder rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="John Doe" />
+                      <label className="text-sm font-bold text-gray-700">{t('contact.name')}</label>
+                      <input type="text" className="w-full bg-background border border-surfaceBorder rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder={t('contact.namePlaceholder')} />
                     </div>
                     <div className="space-y-2">
-                      <label className="text-sm font-bold text-gray-700">Email</label>
-                      <input type="email" className="w-full bg-background border border-surfaceBorder rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="john@example.com" />
+                      <label className="text-sm font-bold text-gray-700">{t('contact.emailLabel')}</label>
+                      <input type="email" className="w-full bg-background border border-surfaceBorder rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder={t('contact.emailPlaceholder')} />
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-700">Project Type</label>
+                    <label className="text-sm font-bold text-gray-700">{t('contact.projectType')}</label>
                     <select className="w-full bg-background border border-surfaceBorder rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors appearance-none">
-                      <option>Custom Website</option>
-                      <option>Web Application</option>
-                      <option>Native Android App</option>
-                      <option>Other</option>
+                      <option>{t('contact.ptOption1')}</option>
+                      <option>{t('contact.ptOption2')}</option>
+                      <option>{t('contact.ptOption3')}</option>
+                      <option>{t('contact.ptOption4')}</option>
                     </select>
                   </div>
                   <div className="space-y-2">
-                    <label className="text-sm font-bold text-gray-700">Message</label>
-                    <textarea rows={4} className="w-full bg-background border border-surfaceBorder rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder="Tell me about your project..."></textarea>
+                    <label className="text-sm font-bold text-gray-700">{t('contact.message')}</label>
+                    <textarea rows={4} className="w-full bg-background border border-surfaceBorder rounded-lg px-4 py-3 text-foreground focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-colors" placeholder={t('contact.messagePlaceholder')}></textarea>
                   </div>
                   <button type="submit" className="w-full py-4 bg-primary text-white font-extrabold rounded-lg hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-[0_4px_14px_0_rgba(0,116,199,0.39)] hover:shadow-[0_6px_20px_rgba(0,116,199,0.23)] hover:-translate-y-0.5">
-                    Send Message <Send size={18} />
+                    {t('contact.sendMsg')} <Send size={18} />
                   </button>
                 </form>
               </motion.div>

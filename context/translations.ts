@@ -1,0 +1,422 @@
+export const translations: Record<string, any> = {
+  en: {
+    nav: {
+      about: "About",
+      services: "Services",
+      portfolio: "Portfolio",
+      contact: "Contact",
+      getQuote: "Get a Quote"
+    },
+    hero: {
+      availability: "Available for new projects",
+      title1: "Building Digital",
+      title2: "Experiences That ",
+      title3: "Convert.",
+      subtitle: "Senior Full-Stack Developer & UI/UX Designer specializing in high-performance web applications, custom websites, and native Android apps.",
+      viewWork: "View My Work",
+      letsTalk: "Let's Talk",
+      webDev: "WEB DEV",
+      androidApps: "ANDROID APPS"
+    },
+    about: {
+      title1: "Engineering Digital ",
+      title2: "Excellence",
+      p1: "Based on years of experience, I specialize in transforming complex requirements into elegant, high-performance web applications and native Android software. Whether it's a bespoke platform for a service-based business or a comprehensive financial tracking tool, I deliver end-to-end solutions that drive results.",
+      p2: "My approach blends cutting-edge technologies with intuitive UI/UX design to ensure your digital presence is not only beautiful but built for conversion and scale.",
+      h1: "Full-Stack Web Development",
+      h2: "UI/UX Design & Prototyping",
+      h3: "Native Android Applications",
+      h4: "SEO & Performance Optimization"
+    },
+    services: {
+      title1: "My ",
+      title2: "Services",
+      subtitle: "Comprehensive technical solutions designed to scale your business and establish a dominant digital footprint.",
+      s1Title: "Custom Website Development",
+      s1Desc: "High-converting, responsive websites tailored for restaurants, tradesmen, and local businesses designed to attract and retain clients.",
+      s2Title: "Web Applications",
+      s2Desc: "Complex, scalable full-stack web applications with intuitive dashboards, robust backends, and seamless user experiences.",
+      s3Title: "Native Android Apps",
+      s3Desc: "High-performance native Android applications built from the ground up for seamless hardware integration and optimal user engagement.",
+      s4Title: "UI/UX & Branding",
+      s4Desc: "Modern, aesthetic, and user-centric interfaces. From wireframes to final pixel-perfect designs that elevate your brand identity."
+    },
+    portfolio: {
+      title1: "Featured ",
+      title2: "Projects",
+      subtitle: "A selection of my recent work, ranging from bespoke client websites to robust native Android applications.",
+      p1Title: "Mezgeb Financial App",
+      p1Category: "Web & Native Android App",
+      p1Desc: "A comprehensive personal financial tracking application. Built as both a responsive web app and a high-performance native Android application to help users manage their finances seamlessly across devices.",
+      p2Title: "Saha Heating & Plumbing",
+      p2Category: "Client Website",
+      p2Desc: "A professional, high-converting service website for a plumbing and heating company based in the UK. Designed to generate leads and showcase services with a modern, responsive layout.",
+      p3Title: "Tolo12 Services",
+      p3Category: "Client Website",
+      p3Desc: "A custom service-based business platform designed to highlight core offerings and streamline customer inquiries with an intuitive UI and fast load times.",
+      p4Title: "Habesha Restaurant",
+      p4Category: "Client Website",
+      p4Desc: "A visually appealing and responsive restaurant website showcasing traditional cuisine, menus, and business details."
+    },
+    contact: {
+      title1: "Let's Build Something ",
+      title2: "Great.",
+      subtitle: "Whether you need a custom website for your local business, a complex web application, or a native Android app, I'm ready to bring your vision to life.",
+      whatsappTitle: "WhatsApp",
+      whatsappDesc: "Direct message for instant replies",
+      emailTitle: "Email",
+      reqQuote: "Request a Quote",
+      name: "Name",
+      namePlaceholder: "John Doe",
+      emailLabel: "Email",
+      emailPlaceholder: "john@example.com",
+      projectType: "Project Type",
+      ptOption1: "Custom Website",
+      ptOption2: "Web Application",
+      ptOption3: "Native Android App",
+      ptOption4: "Other",
+      message: "Message",
+      messagePlaceholder: "Tell me about your project...",
+      sendMsg: "Send Message"
+    },
+    footer: {
+      rights: "© {year} YSM Technologies. All rights reserved."
+    }
+  },
+  am: {
+    nav: {
+      about: "ስለ እኔ",
+      services: "አገልግሎቶች",
+      portfolio: "ስራዎች",
+      contact: "አድራሻ",
+      getQuote: "ዋጋ ይጠይቁ"
+    },
+    hero: {
+      availability: "ለአዳዲስ ስራዎች ክፍት ነኝ",
+      title1: "ዲጂታል ልምዶችን",
+      title2: "እናሳድጋለን ",
+      title3: "",
+      subtitle: "እውቅ የሶፍትዌር አበልጻጊ እና UI/UX ዲዛይነር - ለድርጅትዎ የተሟላ ድረ-ገጽ እና አንድሮይድ አፕሊኬሽኖችን እሰራለሁ።",
+      viewWork: "ስራዎቼን ይመልከቱ",
+      letsTalk: "እንወያይ",
+      webDev: "ድረ-ገጽ",
+      androidApps: "አንድሮይድ አፕ"
+    },
+    about: {
+      title1: "የዲጂታል ",
+      title2: "ብቃት",
+      p1: "ባለኝ የረጅም ጊዜ ልምድ፣ ውስብስብ የሆኑ ፍላጎቶችን ወደ ዘመናዊ እና ፈጣን ድረ-ገጾች እና አንድሮይድ አፕሊኬሽኖች እቀይራለሁ።",
+      p2: "የእኔ አሰራር አዳዲስ ቴክኖሎጂዎችን እና ማራኪ UI/UX ዲዛይንን በማዋሃድ የድርጅትዎን ዲጂታል ገጽታ የተሻለ ያደርገዋል።",
+      h1: "ሙሉ የድረ-ገጽ ልማት (Full-Stack)",
+      h2: "UI/UX ዲዛይን",
+      h3: "የአንድሮይድ አፕሊኬሽኖች",
+      h4: "SEO እና የፍጥነት ማሻሻያ"
+    },
+    services: {
+      title1: "የእኔ ",
+      title2: "አገልግሎቶች",
+      subtitle: "የድርጅትዎን እድገት የሚያፋጥኑ የተሟሉ የቴክኖሎጂ መፍትሄዎች።",
+      s1Title: "ብጁ የድረ-ገጽ ልማት",
+      s1Desc: "ለሬስቶራንቶች፣ አነስተኛ ንግዶች እና ድርጅቶች የተሰሩ ማራኪ ድረ-ገጾች።",
+      s2Title: "የድር አፕሊኬሽኖች (Web Apps)",
+      s2Desc: "ውስብስብ እና ግዙፍ የድር አፕሊኬሽኖች ከተሟላ የዳሽቦርድ አስተዳደር ጋር።",
+      s3Title: "አንድሮይድ አፕሊኬሽኖች",
+      s3Desc: "በጣም ፈጣን እና ዘመናዊ የሆኑ የሞባይል አፕሊኬሽኖች።",
+      s4Title: "UI/UX ዲዛይን",
+      s4Desc: "የደንበኞችን ትኩረት የሚስቡ እና ለመጠቀም ቀላል የሆኑ ዘመናዊ ዲዛይኖች።"
+    },
+    portfolio: {
+      title1: "የተመረጡ ",
+      title2: "ስራዎች",
+      subtitle: "በቅርብ ጊዜ የሰራኋቸው ድረ-ገጾች እና የሞባይል አፕሊኬሽኖች።",
+      p1Title: "መዝገብ የፋይናንስ አፕ",
+      p1Category: "ድረ-ገጽ እና አንድሮይድ አፕ",
+      p1Desc: "የግል ፋይናንስን ለመከታተል የሚረዳ የተሟላ ሲስተም።",
+      p2Title: "Saha Heating & Plumbing",
+      p2Category: "የደንበኛ ድረ-ገጽ",
+      p2Desc: "በእንግሊዝ ሀገር ለሚገኝ የቧንቧ እና ማሞቂያ ድርጅት የተሰራ ፕሮፌሽናል ድረ-ገጽ።",
+      p3Title: "Tolo12 Services",
+      p3Category: "የደንበኛ ድረ-ገጽ",
+      p3Desc: "ለአገልግሎት ሰጪ ድርጅቶች የተሰራ ፈጣን እና ማራኪ ፕላትፎርም።",
+      p4Title: "ሀበሻ ሬስቶራንት",
+      p4Category: "የደንበኛ ድረ-ገጽ",
+      p4Desc: "የባህል ምግቦችን እና ሜኑን የሚያሳይ ማራኪ የሬስቶራንት ድረ-ገጽ።"
+    },
+    contact: {
+      title1: "አብረን ምርጥ ነገር ",
+      title2: "እንስራ",
+      subtitle: "ለድርጅትዎ ድረ-ገጽ ወይም የሞባይል አፕሊኬሽን ከፈለጉ፣ ራዕይዎን እውን ለማድረግ ዝግጁ ነኝ።",
+      whatsappTitle: "WhatsApp (ዋትስአፕ)",
+      whatsappDesc: "ለፈጣን ምላሽ ቀጥታ መልእክት ይላኩ",
+      emailTitle: "ኢሜይል",
+      reqQuote: "ዋጋ ይጠይቁ",
+      name: "ስም",
+      namePlaceholder: "አበበ በሶበላ",
+      emailLabel: "ኢሜይል",
+      emailPlaceholder: "abebe@example.com",
+      projectType: "የፕሮጀክት አይነት",
+      ptOption1: "ብጁ ድረ-ገጽ",
+      ptOption2: "የድር አፕሊኬሽን",
+      ptOption3: "አንድሮይድ አፕ",
+      ptOption4: "ሌላ",
+      message: "መልእክት",
+      messagePlaceholder: "ስለ ፕሮጀክትዎ ይንገሩኝ...",
+      sendMsg: "መልእክት ላክ"
+    },
+    footer: {
+      rights: "© {year} YSM Technologies. መብቱ በህግ የተጠበቀ ነው።"
+    }
+  },
+  ti: {
+    nav: {
+      about: "ብዛዕባይ",
+      services: "ኣገልግሎታት",
+      portfolio: "ስራሓት",
+      contact: "ኣድራሻ",
+      getQuote: "ዋጋ ሕተቱ"
+    },
+    hero: {
+      availability: "ንሓደስቲ ስራሓት ክፉት እየ",
+      title1: "ዲጂታላዊ ተመኩሮታት",
+      title2: "ንሃንጽ ",
+      title3: "",
+      subtitle: "በዓል ሞያ ሶፍትዌርን UI/UX ዲዛይነርን - ንትካልኩም ምሉእ ድረ-ገጽን ኣንድሮይድ ኣፕሊኬሽናትን ይሰርሕ።",
+      viewWork: "ስራሓተይ ርኣዩ",
+      letsTalk: "ንዛረብ",
+      webDev: "ድረ-ገጽ",
+      androidApps: "ኣንድሮይድ ኣፕ"
+    },
+    about: {
+      title1: "ዲጂታላዊ ",
+      title2: "ብቕዓት",
+      p1: "ብዘለኒ ናይ ነዊሕ እዋን ተመኩሮ፣ ዝተሓላለኹ ድሌታት ናብ ዘመናዊን ቅልጡፍን ድረ-ገጻትን ኣንድሮይድ ኣፕሊኬሽናትን ይቕይር።",
+      p2: "ኣሰራርሓይ ሓደስቲ ቴክኖሎጂታትን ማራኺ UI/UX ዲዛይንን ብምውህሃድ ናይ ትካልኩም ዲጂታላዊ ገጽታ ዝሓሸ ይገብሮ።",
+      h1: "ምሉእ ናይ ድረ-ገጽ ልምዓት",
+      h2: "UI/UX ዲዛይን",
+      h3: "ናይ ኣንድሮይድ ኣፕሊኬሽናት",
+      h4: "SEO ማሕበራዊ መራኸቢታት"
+    },
+    services: {
+      title1: "ናተይ ",
+      title2: "ኣገልግሎታት",
+      subtitle: "ናይ ትካልኩም ዕብየት ዘቀላጥፉ ምሉኣት ናይ ቴክኖሎጂ ፍታሓት።",
+      s1Title: "ብጁ ናይ ድረ-ገጽ ልምዓት",
+      s1Desc: "ንሬስቶራንታት፣ ንኣሽቱ ትካላትን ማሕበራትን ዝተሰርሑ ማረኽቲ ድረ-ገጻት።",
+      s2Title: "ናይ ዌብ ኣፕሊኬሽናት",
+      s2Desc: "ዝተሓላለኹን ዓበይትን ናይ ዌብ ኣፕሊኬሽናት ምስ ምሉእ ናይ ዳሽቦርድ ምሕደራ።",
+      s3Title: "ኣንድሮይድ ኣፕሊኬሽናት",
+      s3Desc: "ኣዝዮም ቅልጡፋትን ዘመናውያንን ናይ ሞባይል ኣፕሊኬሽናት።",
+      s4Title: "UI/UX ዲዛይን",
+      s4Desc: "ናይ ዓማዊል ቆላሕታ ዝስሕቡን ንምጥቃም ቀለልቲ ዝኾኑን ዘመናውያን ዲዛይናት።"
+    },
+    portfolio: {
+      title1: "ዝተሓርዩ ",
+      title2: "ስራሓት",
+      subtitle: "ኣብ ቀረባ እዋን ዝሰራሕክዎም ድረ-ገጻትን ናይ ሞባይል ኣፕሊኬሽናትን።",
+      p1Title: "መዝገብ ናይ ፋይናንስ ኣፕ",
+      p1Category: "ድረ-ገጽን ኣንድሮይድ ኣፕን",
+      p1Desc: "ብሕታዊ ፋይናንስ ንምክትታል ዝሕግዝ ምሉእ ሲስተም።",
+      p2Title: "Saha Heating & Plumbing",
+      p2Category: "ናይ ዓሚል ድረ-ገጽ",
+      p2Desc: "ኣብ ዓዲ እንግሊዝ ንዝርከብ ናይ ቱቦን መሞቒን ትካል ዝተሰርሐ ፕሮፌሽናል ድረ-ገጽ።",
+      p3Title: "Tolo12 Services",
+      p3Category: "ናይ ዓሚል ድረ-ገጽ",
+      p3Desc: "ንኣገልግሎት ወሃብቲ ትካላት ዝተሰርሐ ቅልጡፍን ማራኺን ፕላትፎርም።",
+      p4Title: "ሓበሻ ሬስቶራንት",
+      p4Category: "ናይ ዓሚል ድረ-ገጽ",
+      p4Desc: "ናይ ባህሊ መግብታትን ሜኑን ዘርኢ ማራኺ ናይ ሬስቶራንት ድረ-ገጽ።"
+    },
+    contact: {
+      title1: "ብሓባር ጽቡቕ ነገር ",
+      title2: "ንሰራሕ",
+      subtitle: "ንትካልኩም ድረ-ገጽ ወይ ናይ ሞባይል ኣፕሊኬሽን እንተደሊኹም፣ ራእይኩም ጋህዲ ንምግባር ድሉው እየ።",
+      whatsappTitle: "WhatsApp (ዋትስኣፕ)",
+      whatsappDesc: "ንቕልጡፍ ምላሽ ቀጥታ መልእኽቲ ስደዱ",
+      emailTitle: "ኢሜይል",
+      reqQuote: "ዋጋ ሕተቱ",
+      name: "ሽም",
+      namePlaceholder: "ኣማኑኤል",
+      emailLabel: "ኢሜይል",
+      emailPlaceholder: "amanuel@example.com",
+      projectType: "ዓይነት ፕሮጀክት",
+      ptOption1: "ብጁ ድረ-ገጽ",
+      ptOption2: "ናይ ዌብ ኣፕሊኬሽን",
+      ptOption3: "ኣንድሮይድ ኣፕ",
+      ptOption4: "ካልእ",
+      message: "መልእኽቲ",
+      messagePlaceholder: "ብዛዕባ ፕሮጀክትኩም ንገሩኒ...",
+      sendMsg: "መልእኽቲ ስደድ"
+    },
+    footer: {
+      rights: "© {year} YSM Technologies. ኩሉ መሰል ዝተሓለወ እዩ።"
+    }
+  },
+  it: {
+    nav: {
+      about: "Chi Sono",
+      services: "Servizi",
+      portfolio: "Portfolio",
+      contact: "Contatti",
+      getQuote: "Preventivo"
+    },
+    hero: {
+      availability: "Disponibile per nuovi progetti",
+      title1: "Costruiamo Esperienze",
+      title2: "Digitali Che ",
+      title3: "Convertono.",
+      subtitle: "Sviluppatore Full-Stack Senior & UI/UX Designer specializzato in applicazioni web ad alte prestazioni, siti web personalizzati e app Android native.",
+      viewWork: "I Miei Lavori",
+      letsTalk: "Parliamone",
+      webDev: "SVILUPPO WEB",
+      androidApps: "APP ANDROID"
+    },
+    about: {
+      title1: "Eccellenza Digitale ",
+      title2: "Ingegnerizzata",
+      p1: "Basandomi su anni di esperienza, sono specializzato nel trasformare requisiti complessi in applicazioni web e software Android nativi eleganti e ad alte prestazioni. Che si tratti di una piattaforma su misura o di uno strumento completo di tracciamento finanziario, fornisco soluzioni end-to-end che portano risultati.",
+      p2: "Il mio approccio fonde tecnologie all'avanguardia con un design UI/UX intuitivo per garantire che la tua presenza digitale non sia solo bella, ma costruita per la conversione e la scalabilità.",
+      h1: "Sviluppo Web Full-Stack",
+      h2: "UI/UX Design & Prototipazione",
+      h3: "Applicazioni Android Native",
+      h4: "SEO & Ottimizzazione Prestazioni"
+    },
+    services: {
+      title1: "I Miei ",
+      title2: "Servizi",
+      subtitle: "Soluzioni tecniche complete progettate per scalare il tuo business e stabilire un'impronta digitale dominante.",
+      s1Title: "Sviluppo Siti Web Personalizzati",
+      s1Desc: "Siti web reattivi ad alta conversione su misura per ristoranti, artigiani e imprese locali progettati per attrarre e fidelizzare i clienti.",
+      s2Title: "Applicazioni Web",
+      s2Desc: "Applicazioni web full-stack complesse e scalabili con dashboard intuitive, backend robusti ed esperienze utente fluide.",
+      s3Title: "App Android Native",
+      s3Desc: "Applicazioni Android native ad alte prestazioni costruite da zero per un'integrazione hardware fluida e un coinvolgimento ottimale dell'utente.",
+      s4Title: "UI/UX & Branding",
+      s4Desc: "Interfacce moderne, estetiche e centrate sull'utente. Dai wireframe al design finale perfetto al pixel che eleva l'identità del tuo brand."
+    },
+    portfolio: {
+      title1: "Progetti ",
+      title2: "In Evidenza",
+      subtitle: "Una selezione dei miei lavori recenti, che spaziano da siti web su misura per clienti a robuste applicazioni Android native.",
+      p1Title: "App Finanziaria Mezgeb",
+      p1Category: "Web & App Android Nativa",
+      p1Desc: "Un'applicazione completa per il tracciamento finanziario personale. Costruita sia come web app reattiva che come applicazione Android nativa.",
+      p2Title: "Saha Heating & Plumbing",
+      p2Category: "Sito Web Cliente",
+      p2Desc: "Un sito web di servizi professionale e ad alta conversione per un'azienda di idraulica e riscaldamento con sede nel Regno Unito.",
+      p3Title: "Servizi Tolo12",
+      p3Category: "Sito Web Cliente",
+      p3Desc: "Una piattaforma aziendale basata su servizi progettata per evidenziare le offerte principali e semplificare le richieste dei clienti.",
+      p4Title: "Ristorante Habesha",
+      p4Category: "Sito Web Cliente",
+      p4Desc: "Un sito web per ristorante visivamente accattivante e reattivo che mostra la cucina tradizionale, i menu e i dettagli dell'attività."
+    },
+    contact: {
+      title1: "Costruiamo Qualcosa Di ",
+      title2: "Grande.",
+      subtitle: "Che tu abbia bisogno di un sito web personalizzato per la tua attività locale, di un'applicazione web complessa o di un'app Android nativa, sono pronto a dare vita alla tua visione.",
+      whatsappTitle: "WhatsApp",
+      whatsappDesc: "Messaggio diretto per risposte immediate",
+      emailTitle: "Email",
+      reqQuote: "Richiedi un Preventivo",
+      name: "Nome",
+      namePlaceholder: "Mario Rossi",
+      emailLabel: "Email",
+      emailPlaceholder: "mario@example.com",
+      projectType: "Tipo di Progetto",
+      ptOption1: "Sito Web Personalizzato",
+      ptOption2: "Applicazione Web",
+      ptOption3: "App Android Nativa",
+      ptOption4: "Altro",
+      message: "Messaggio",
+      messagePlaceholder: "Parlami del tuo progetto...",
+      sendMsg: "Invia Messaggio"
+    },
+    footer: {
+      rights: "© {year} YSM Technologies. Tutti i diritti riservati."
+    }
+  },
+  de: {
+    nav: {
+      about: "Über Mich",
+      services: "Dienste",
+      portfolio: "Portfolio",
+      contact: "Kontakt",
+      getQuote: "Angebot"
+    },
+    hero: {
+      availability: "Verfügbar für neue Projekte",
+      title1: "Digitale Erlebnisse, ",
+      title2: "die ",
+      title3: "Konvertieren.",
+      subtitle: "Senior Full-Stack Entwickler & UI/UX Designer, spezialisiert auf hochleistungsfähige Webanwendungen, maßgeschneiderte Websites und native Android-Apps.",
+      viewWork: "Meine Arbeiten",
+      letsTalk: "Lass uns reden",
+      webDev: "WEB DEV",
+      androidApps: "ANDROID APPS"
+    },
+    about: {
+      title1: "Digitale ",
+      title2: "Exzellenz",
+      p1: "Basierend auf jahrelanger Erfahrung bin ich darauf spezialisiert, komplexe Anforderungen in elegante, hochleistungsfähige Webanwendungen und native Android-Software zu verwandeln.",
+      p2: "Mein Ansatz verbindet modernste Technologien mit intuitivem UI/UX-Design, um sicherzustellen, dass Ihre digitale Präsenz nicht nur schön ist, sondern auch für Konversion und Skalierung gebaut ist.",
+      h1: "Full-Stack Webentwicklung",
+      h2: "UI/UX Design & Prototyping",
+      h3: "Native Android Anwendungen",
+      h4: "SEO & Leistungsoptimierung"
+    },
+    services: {
+      title1: "Meine ",
+      title2: "Dienste",
+      subtitle: "Umfassende technische Lösungen, die darauf ausgelegt sind, Ihr Unternehmen zu skalieren und eine dominante digitale Präsenz aufzubauen.",
+      s1Title: "Maßgeschneiderte Webentwicklung",
+      s1Desc: "Konversionsstarke, responsive Websites, die auf Restaurants, Handwerker und lokale Unternehmen zugeschnitten sind.",
+      s2Title: "Webanwendungen",
+      s2Desc: "Komplexe, skalierbare Full-Stack-Webanwendungen mit intuitiven Dashboards, robusten Backends und nahtlosen Benutzererlebnissen.",
+      s3Title: "Native Android Apps",
+      s3Desc: "Hochleistungsfähige native Android-Anwendungen, die von Grund auf für eine nahtlose Hardwareintegration entwickelt wurden.",
+      s4Title: "UI/UX & Branding",
+      s4Desc: "Moderne, ästhetische und benutzerzentrierte Schnittstellen. Von Wireframes bis hin zu pixelperfekten finalen Designs."
+    },
+    portfolio: {
+      title1: "Ausgewählte ",
+      title2: "Projekte",
+      subtitle: "Eine Auswahl meiner neuesten Arbeiten, von maßgeschneiderten Kunden-Websites bis hin zu robusten nativen Android-Anwendungen.",
+      p1Title: "Mezgeb Finanz-App",
+      p1Category: "Web & Native Android App",
+      p1Desc: "Eine umfassende Anwendung zur persönlichen Finanzverfolgung. Gebaut als responsive Web-App und native Android-Anwendung.",
+      p2Title: "Saha Heating & Plumbing",
+      p2Category: "Kunden-Website",
+      p2Desc: "Eine professionelle, konversionsstarke Service-Website für ein Sanitär- und Heizungsunternehmen in Großbritannien.",
+      p3Title: "Tolo12 Services",
+      p3Category: "Kunden-Website",
+      p3Desc: "Eine maßgeschneiderte Geschäftsplattform, die Kernangebote hervorhebt und Kundenanfragen optimiert.",
+      p4Title: "Habesha Restaurant",
+      p4Category: "Kunden-Website",
+      p4Desc: "Eine optisch ansprechende und responsive Restaurant-Website, die traditionelle Küche und Menüs präsentiert."
+    },
+    contact: {
+      title1: "Lass uns etwas ",
+      title2: "Großartiges bauen.",
+      subtitle: "Ob Sie eine maßgeschneiderte Website für Ihr lokales Unternehmen, eine komplexe Webanwendung oder eine native Android-App benötigen, ich bin bereit, Ihre Vision zum Leben zu erwecken.",
+      whatsappTitle: "WhatsApp",
+      whatsappDesc: "Direktnachricht für sofortige Antworten",
+      emailTitle: "E-Mail",
+      reqQuote: "Angebot anfordern",
+      name: "Name",
+      namePlaceholder: "Max Mustermann",
+      emailLabel: "E-Mail",
+      emailPlaceholder: "max@example.com",
+      projectType: "Projekttyp",
+      ptOption1: "Maßgeschneiderte Website",
+      ptOption2: "Webanwendung",
+      ptOption3: "Native Android App",
+      ptOption4: "Anderes",
+      message: "Nachricht",
+      messagePlaceholder: "Erzählen Sie mir von Ihrem Projekt...",
+      sendMsg: "Nachricht senden"
+    },
+    footer: {
+      rights: "© {year} YSM Technologies. Alle Rechte vorbehalten."
+    }
+  }
+};

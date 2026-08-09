@@ -4,13 +4,16 @@ import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
 import Image from 'next/image'
 import logo from '../ysm-logo.png'
+import { useLanguage } from '../context/LanguageContext'
 
 export default function About() {
+  const { t } = useLanguage()
+
   const highlights = [
-    "Full-Stack Web Development",
-    "UI/UX Design & Prototyping",
-    "Native Android Applications",
-    "SEO & Performance Optimization"
+    t('about.h1'),
+    t('about.h2'),
+    t('about.h3'),
+    t('about.h4')
   ]
 
   return (
@@ -40,13 +43,13 @@ export default function About() {
             className="w-full md:w-1/2"
           >
             <h2 className="text-3xl md:text-4xl font-heading font-extrabold mb-6 text-foreground">
-              Engineering Digital <span className="text-primary">Excellence</span>
+              {t('about.title1')} <span className="text-primary">{t('about.title2')}</span>
             </h2>
             <p className="text-gray-600 mb-6 text-lg leading-relaxed font-medium">
-              Based on years of experience, I specialize in transforming complex requirements into elegant, high-performance web applications and native Android software. Whether it's a bespoke platform for a service-based business or a comprehensive financial tracking tool, I deliver end-to-end solutions that drive results.
+              {t('about.p1')}
             </p>
             <p className="text-gray-600 mb-8 text-lg leading-relaxed font-medium">
-              My approach blends cutting-edge technologies with intuitive UI/UX design to ensure your digital presence is not only beautiful but built for conversion and scale.
+              {t('about.p2')}
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "#F8FAFC", // Cleaner, icy white/blue
+        background: "#FFFFFF", // Pure white
         foreground: "#0F2B56", // Dark navy blue from logo
         primary: {
           DEFAULT: "#0074C7", // Bright blue from logo

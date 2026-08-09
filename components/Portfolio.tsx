@@ -65,8 +65,10 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-surface border border-surfaceBorder shadow-sm p-8 rounded-2xl flex flex-col h-full group hover:shadow-xl hover:border-primary/40 transition-all duration-300"
+              className="glass-panel p-8 rounded-2xl flex flex-col h-full group hover:shadow-glow-blue hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
             >
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary-neon/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-[4rem]" />
+
               <div className="flex justify-between items-start mb-6">
                 <div>
                   <span className={`text-xs font-extrabold uppercase tracking-wider px-3 py-1.5 rounded-full ${project.isLive ? 'bg-blue-100 text-primary' : 'bg-green-100 text-green-700'}`}>

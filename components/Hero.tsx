@@ -13,8 +13,8 @@ export default function Hero() {
       <section className="relative min-h-[90vh] flex items-center justify-center pt-24 overflow-hidden bg-gradient-to-b from-blue-50/50 to-background">
         <CulturalBackground />
         {/* Background elements */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -z-10" />
-        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-green-500/10 rounded-full blur-[100px] -z-10" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-[100px] -z-10" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-primary-neon/10 rounded-full blur-[100px] -z-10" />
 
         <div className="container mx-auto px-6 lg:px-12 text-center">
           <motion.div
@@ -32,7 +32,7 @@ export default function Hero() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-heading font-extrabold tracking-tight mb-6 leading-tight text-foreground">
-              {t('hero.title1')} {t('hero.title2')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-green-600">{t('hero.title3')}</span>
+              {t('hero.title1')} {t('hero.title2')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-neon drop-shadow-sm">{t('hero.title3')}</span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-medium">
@@ -40,10 +40,10 @@ export default function Hero() {
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#portfolio" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-[0_8px_30px_rgb(0,116,199,0.3)] hover:shadow-[0_8px_30px_rgb(0,116,199,0.5)] hover:-translate-y-1">
+              <a href="#portfolio" className="w-full sm:w-auto px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-glow-blue hover:-translate-y-1">
                 {t('hero.viewWork')} <ArrowRight size={18} />
               </a>
-              <a href="#contact" className="w-full sm:w-auto px-8 py-4 bg-white border-2 border-surfaceBorder text-foreground font-bold rounded-full hover:border-primary/30 hover:bg-blue-50 transition-all hover:-translate-y-1">
+              <a href="#contact" className="w-full sm:w-auto px-8 py-4 glass-panel text-foreground font-bold rounded-full hover:border-primary/50 hover:bg-white/60 transition-all hover:-translate-y-1">
                 {t('hero.letsTalk')}
               </a>
             </div>

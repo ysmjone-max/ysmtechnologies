@@ -50,8 +50,11 @@ export default function Services() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-white p-8 rounded-2xl hover:-translate-y-2 transition-transform duration-300 group border border-surfaceBorder shadow-sm hover:shadow-xl hover:border-primary/30"
+              className="glass-panel p-8 rounded-2xl hover:-translate-y-2 transition-all duration-300 group hover:shadow-glow-blue hover:border-primary/50 relative overflow-hidden"
             >
+              {/* Subtle Axumite corner glow */}
+              <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-primary-neon/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-3xl" />
+
               <div className="mb-6 p-4 rounded-xl bg-blue-50 inline-block group-hover:bg-primary group-hover:text-white transition-colors duration-300">
                 <div className="group-hover:brightness-200 transition-all">
                   {service.icon}

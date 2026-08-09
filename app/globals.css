@@ -4,7 +4,10 @@
 
 @layer base {
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-foreground;
+    @apply bg-background text-foreground antialiased selection:bg-primary/20 selection:text-primary;
+    background-image: 
+      radial-gradient(circle at 15% 50%, rgba(0, 116, 199, 0.05), transparent 25%),
+      radial-gradient(circle at 85% 30%, rgba(0, 229, 255, 0.05), transparent 25%);
   }
 }
 
@@ -13,7 +16,7 @@ html {
 }
 
 .glass-panel {
-  @apply bg-surface/80 backdrop-blur-md border border-surfaceBorder shadow-sm;
+  @apply bg-white/40 backdrop-blur-xl border border-white shadow-glass;
 }
 
 /* Custom pattern for Ethiopian/Eritrean Tibeb */
@@ -26,8 +29,17 @@ html {
     #fcd116 20px,
     #ce1126 20px, /* Red */
     #ce1126 30px,
-    #0072c6 30px, /* Blue (Eritrea/Ethiopia accents) */
-    #0072c6 40px
+    #0074C7 30px, /* Primary Blue */
+    #0074C7 40px
   );
   background-size: 56px 56px;
+}
+
+.hologram-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 12s linear infinite;
+  stroke: url(#neon-gradient);
+  stroke-width: 1.5;
+  filter: drop-shadow(0 0 4px rgba(0, 229, 255, 0.6));
 }

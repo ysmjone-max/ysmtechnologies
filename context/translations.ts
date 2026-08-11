@@ -166,7 +166,7 @@ export const translations: Record<string, any> = {
       p2: "የእኛ አሰራር አዳዲስ ቴክኖሎጂዎችን እና ማራኪ UI/UX ዲዛይንን በማዋሃድ የድርጅትዎን ዲጂታል ገጽታ የተሻለ፣ ውጤታማ እና አስተማማኝ ያደርገዋል።",
       h1: "ሙሉ የድረ-ገጽ ልማት (Full-Stack)",
       h2: "UI/UX ዲዛይን",
-      h3: "የአንድሮይድ እና የሞባይል አፕሊኬሽኖች",
+      h3: "የሞባይል አፕሊኬሽኖች (Native & Cross-Platform)",
       h4: "SEO እና የዲጂታል ለውጥ"
     },
     services: {
@@ -230,7 +230,7 @@ export const translations: Record<string, any> = {
     process: {
       title1: "ቀላል ባለ 4 ደረጃ ",
       title2: "አሰራር",
-      p1Title: "01 — ማወቅ",
+      p1Title: "01 — መረዳት (Discover)",
       p1Desc: "የእርስዎን ንግድ፣ ግቦች እና ተግዳሮቶች እንረዳለን።",
       p2Title: "02 — ዲዛይን",
       p2Desc: "አወቃቀሩን እና የተጠቃሚን ልምድ እንቀርፃለን።",
@@ -248,11 +248,11 @@ export const translations: Record<string, any> = {
       emailTitle: "ኢሜይል ይላኩልን",
       reqQuote: "ፕሮጀክትዎን ይጀምሩ",
       name: "ስም",
-      namePlaceholder: "አበበ በሶበላ",
+      namePlaceholder: "አበበ ከበደ",
       businessName: "የድርጅት ስም",
       businessPlaceholder: "የእርስዎ ድርጅት",
       emailLabel: "ኢሜይል",
-      emailPlaceholder: "abebe@example.com",
+      emailPlaceholder: "abebe.k@example.com",
       phoneLabel: "ስልክ / ዋትስአፕ (WhatsApp)",
       phonePlaceholder: "+44 7700 900077",
       countryLabel: "ሀገር",
@@ -308,7 +308,7 @@ export const translations: Record<string, any> = {
       h1: "ምሉእ ናይ ድረ-ገጽ ልምዓት (Full-Stack)",
       h2: "UI/UX ዲዛይን",
       h3: "ናይ ሞባይል ኣፕሊኬሽናት (iOS/Android)",
-      h4: "SEO ማሕበራዊ መራኸቢታት"
+      h4: "SEOን ዲጂታላዊ ለውጥን"
     },
     services: {
       title1: "ናይና ",
@@ -371,7 +371,7 @@ export const translations: Record<string, any> = {
     process: {
       title1: "ቀሊል ናይ 4 ደረጃ ",
       title2: "ኣሰራርሓ",
-      p1Title: "01 — ምፍላጥ",
+      p1Title: "01 — ምርዳእ (Discover)",
       p1Desc: "ንግድኹም፣ ሸቶታትኩምን ብድሆታትኩምን ንርዳእ።",
       p2Title: "02 — ዲዛይን",
       p2Desc: "ኣወዳድባን ተመኩሮ ተጠቃማይን ንነድፍ።",
@@ -389,11 +389,11 @@ export const translations: Record<string, any> = {
       emailTitle: "ኢሜይል ስደዱልና",
       reqQuote: "ፕሮጀክትኩም ጀምሩ",
       name: "ሽም",
-      namePlaceholder: "ኣማኑኤል",
+      namePlaceholder: "ኣማኑኤል ተስፋይ",
       businessName: "ሽም ትካል",
       businessPlaceholder: "ናይኹም ትካል",
       emailLabel: "ኢሜይል",
-      emailPlaceholder: "amanuel@example.com",
+      emailPlaceholder: "amanuel.t@example.com",
       phoneLabel: "ስልኪ / ዋትስኣፕ (WhatsApp)",
       phonePlaceholder: "+44 7700 900077",
       countryLabel: "ሃገር",

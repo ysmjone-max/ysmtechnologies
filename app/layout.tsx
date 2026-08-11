@@ -1,7 +1,10 @@
 import type { Metadata } from 'next'
 import { Inter, Space_Grotesk } from 'next/font/google'
 import './globals.css'
-import { LanguageProvider } from '../context/LanguageContext'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import WhatsAppCTA from '@/components/WhatsAppCTA'
+import { LanguageProvider } from '@/context/LanguageContext'
 
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
@@ -21,7 +24,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.variable} ${spaceGrotesk.variable} font-sans`}>
         <LanguageProvider>
-          {children}
+          <div className="flex flex-col min-h-screen">
+            <Navbar />
+            <main className="flex-grow pt-16">
+              {children}
+            </main>
+            <Footer />
+            <WhatsAppCTA />
+          </div>
         </LanguageProvider>
       </body>
     </html>

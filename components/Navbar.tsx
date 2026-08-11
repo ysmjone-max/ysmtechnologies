@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import logo from '../ysm-logo.png'
 import LanguageSwitcher from './LanguageSwitcher'
 import { useLanguage } from '../context/LanguageContext'
@@ -21,30 +22,29 @@ export default function Navbar() {
   }, [])
 
   const navLinks = [
-    { name: t('nav.about'), href: '#about' },
-    { name: t('nav.services'), href: '#services' },
-    { name: t('nav.portfolio'), href: '#portfolio' },
-    { name: t('nav.contact'), href: '#contact' },
+    { name: t('nav.services'), href: '/#services' },
+    { name: t('nav.portfolio'), href: '/#portfolio' },
+    { name: t('nav.contact'), href: '/#contact' },
   ]
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-surface/90 backdrop-blur-md border-b border-surfaceBorder py-2' : 'bg-transparent py-3 md:py-4'}`}>
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
-        <a href="#" className="flex items-center">
+        <Link href="/" className="flex items-center">
            <Image src={logo} alt="YSM Technologies Logo" className="w-24 md:w-32 h-auto object-contain mix-blend-multiply -my-4 md:-my-6" />
-        </a>
+        </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center space-x-6 lg:space-x-8">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">
+            <Link key={link.name} href={link.href} className="text-sm font-semibold text-foreground/80 hover:text-primary transition-colors">
               {link.name}
-            </a>
+            </Link>
           ))}
           <LanguageSwitcher />
-          <a href="#contact" className="px-6 py-2.5 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-all shadow-[0_4px_14px_0_rgba(0,116,199,0.39)] hover:shadow-[0_6px_20px_rgba(0,116,199,0.23)] hover:-translate-y-0.5">
+          <Link href="/#contact" className="px-6 py-2.5 bg-primary text-white font-semibold rounded-full hover:bg-primary-dark transition-all shadow-[0_4px_14px_0_rgba(0,116,199,0.39)] hover:shadow-[0_6px_20px_rgba(0,116,199,0.23)] hover:-translate-y-0.5">
             {t('nav.getQuote')}
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Nav Header items */}
@@ -60,13 +60,13 @@ export default function Navbar() {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-surface border-b border-surfaceBorder py-4 px-6 flex flex-col space-y-4 shadow-xl">
           {navLinks.map((link) => (
-            <a key={link.name} href={link.href} onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary font-semibold">
+            <Link key={link.name} href={link.href} onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary font-semibold">
               {link.name}
-            </a>
+            </Link>
           ))}
-          <a href="#contact" onClick={() => setIsMenuOpen(false)} className="px-6 py-3 text-center bg-primary text-white font-semibold rounded-lg shadow-md">
+          <Link href="/#contact" onClick={() => setIsMenuOpen(false)} className="px-6 py-3 text-center bg-primary text-white font-semibold rounded-lg shadow-md">
             {t('nav.getQuote')}
-          </a>
+          </Link>
         </div>
       )}
     </nav>

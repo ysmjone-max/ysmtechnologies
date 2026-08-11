@@ -38,17 +38,17 @@ export default function Portfolio() {
       category: t('portfolio.p4Category'),
       description: t('portfolio.p4Desc'),
       tech: ["HTML", "CSS", "JavaScript"],
-      link: "https://ysmjone-max.github.io/Habesharestorant/#about",
+      link: "https://ysmjone-max.github.io/Habesharestorant.de/",
       isLive: true,
     }
   ]
 
   return (
-    <section id="portfolio" className="py-24 relative bg-white">
-      <div className="container mx-auto px-6 lg:px-12">
+    <section id="portfolio" className="py-16 md:py-24 relative bg-white">
+      <div className="container mx-auto px-5 sm:px-6 md:px-8 lg:px-12">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16">
           <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-heading font-extrabold mb-6 text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-extrabold mb-6 text-foreground">
               {t('portfolio.title1')} <span className="text-primary">{t('portfolio.title2')}</span>
             </h2>
             <p className="text-gray-600 text-lg font-medium">
@@ -57,7 +57,7 @@ export default function Portfolio() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -65,7 +65,7 @@ export default function Portfolio() {
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-panel p-8 rounded-2xl flex flex-col h-full group hover:shadow-glow-blue hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
+              className="glass-panel p-6 md:p-8 rounded-2xl flex flex-col h-full group hover:shadow-glow-blue hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary-neon/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-[4rem]" />
 

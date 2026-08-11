@@ -28,7 +28,7 @@ export default function Navbar() {
   ]
 
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${(isScrolled || isMenuOpen) ? 'bg-surface/90 backdrop-blur-md border-b border-surfaceBorder py-2' : 'bg-transparent py-3 md:py-4'}`}>
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${(isScrolled || isMenuOpen) ? 'bg-white/95 backdrop-blur-md border-b border-gray-200 py-2 shadow-sm' : 'bg-transparent py-3 md:py-4'}`}>
       <div className="container mx-auto px-6 lg:px-12 flex justify-between items-center">
         <Link href="/" className="flex items-center">
            <Image src={logo} alt="YSM Technologies Logo" className="w-24 md:w-32 h-auto object-contain mix-blend-multiply -my-4 md:-my-6" />
@@ -58,7 +58,7 @@ export default function Navbar() {
 
       {/* Mobile Nav */}
       {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-surface border-b border-surfaceBorder py-4 px-6 flex flex-col space-y-4 shadow-xl">
+        <div className="md:hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-200 py-4 px-6 flex flex-col space-y-4 shadow-xl">
           {navLinks.map((link) => (
             <Link key={link.name} href={link.href} onClick={() => setIsMenuOpen(false)} className="text-foreground/80 hover:text-primary font-semibold">
               {link.name}

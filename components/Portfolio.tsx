@@ -59,13 +59,16 @@ export default function Portfolio() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {projects.map((project, index) => (
-            <motion.div
+            <motion.a
               key={index}
+              href={project.isLive ? project.link : undefined}
+              target={project.isLive ? "_blank" : undefined}
+              rel={project.isLive ? "noopener noreferrer" : undefined}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass-panel p-6 md:p-8 rounded-2xl flex flex-col h-full group hover:shadow-glow-blue hover:border-primary/50 transition-all duration-300 relative overflow-hidden"
+              className={`glass-panel p-6 md:p-8 rounded-2xl flex flex-col h-full group hover:shadow-glow-blue hover:border-primary/50 transition-all duration-300 relative overflow-hidden ${project.isLive ? 'cursor-pointer' : 'cursor-default'}`}
             >
               <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-primary-neon/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-bl-[4rem]" />
 
@@ -77,14 +80,14 @@ export default function Portfolio() {
                 </div>
                 <div className="flex gap-3">
                   {project.hasAndroid && (
-                     <span className="text-gray-400 hover:text-primary transition-colors cursor-help" title="Native Android App Available">
+                     <span className="text-gray-400 group-hover:text-primary transition-colors" title="Native Android App Available">
                        <Smartphone size={22} />
                      </span>
                   )}
                   {project.isLive && (
-                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
+                    <span className="text-gray-400 group-hover:text-primary transition-colors">
                       <ExternalLink size={22} />
-                    </a>
+                    </span>
                   )}
                 </div>
               </div>
@@ -101,7 +104,7 @@ export default function Portfolio() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>

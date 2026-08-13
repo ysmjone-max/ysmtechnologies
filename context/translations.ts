@@ -12,11 +12,17 @@ export const translations: Record<string, any> = {
       title1: "Your Vision. ",
       title2: "Our Technology. ",
       title3: "Infinite Possibilities.",
-      subtitle: "We design and build professional websites, applications and digital solutions that help businesses attract customers, work smarter and grow.",
+      subtitle: "We build professional websites, digital menus, booking systems and custom digital solutions for businesses across Europe.",
       viewWork: "View Our Work",
       letsTalk: "Get a Free Website Review",
       webDev: "WEBSITES",
-      androidApps: "APPLICATIONS"
+      androidApps: "APPLICATIONS",
+      restaurantBannerTitle: "Own a Restaurant or Small Business?",
+      restaurantBannerDesc: "We build professional websites, digital menus, booking systems and WhatsApp-integrated solutions that help local businesses get more customers online.",
+      restaurantBannerBtn: "See Restaurant Solutions",
+      auditTitle: "Is your business easy to find online?",
+      auditDesc: "We'll review your website, Google presence, menu, booking experience and social media—and show you where you can improve.",
+      auditBtn: "Get a Free Digital Audit →"
     },
     about: {
       title1: "Engineering Digital ",

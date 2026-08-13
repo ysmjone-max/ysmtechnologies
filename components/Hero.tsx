@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Code, Smartphone } from 'lucide-react'
+import { ArrowRight, Code, Smartphone, Store, Search } from 'lucide-react'
 import CulturalBackground from './CulturalBackground'
 import { useLanguage } from '../context/LanguageContext'
 
@@ -45,12 +45,17 @@ export default function Hero() {
             </div>
             
             {/* Restaurant Solutions Banner */}
-            <div className="mt-12 md:mt-16 bg-white/70 backdrop-blur-md border border-orange-200 p-6 md:p-8 rounded-3xl text-left shadow-xl hover:shadow-2xl transition-all group flex flex-col md:flex-row items-center gap-6 relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-orange-100 rounded-full blur-[50px] -z-10 group-hover:bg-orange-200 transition-colors"></div>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.3, duration: 0.6 }}
+              className="mt-12 md:mt-16 bg-white/70 backdrop-blur-md border border-blue-100 p-6 md:p-8 rounded-3xl text-left shadow-xl hover:shadow-2xl transition-all group flex flex-col md:flex-row items-center gap-6 relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-[50px] -z-10 group-hover:bg-primary-neon/10 transition-colors"></div>
               
               <div className="flex-1">
                 <h3 className="text-xl md:text-2xl font-black text-foreground mb-2 flex items-center gap-2">
-                  🍽️ {t('hero.restaurantBannerTitle')}
+                  <Store className="text-primary-neon" size={24} /> {t('hero.restaurantBannerTitle')}
                 </h3>
                 <p className="text-gray-600 font-medium text-sm md:text-base leading-relaxed max-w-xl">
                   {t('hero.restaurantBannerDesc')}
@@ -58,17 +63,22 @@ export default function Hero() {
               </div>
               
               <div className="w-full md:w-auto">
-                <a href="/restaurants" className="block w-full md:w-auto text-center px-6 py-4 bg-orange-600 text-white font-bold rounded-xl hover:bg-orange-700 transition-colors whitespace-nowrap shadow-md">
+                <a href="/restaurants" className="block w-full md:w-auto text-center px-6 py-4 bg-primary-neon text-primary-dark font-black rounded-xl hover:bg-[#00d5ed] transition-all whitespace-nowrap shadow-[0_0_20px_rgba(0,229,255,0.4)] hover:shadow-[0_0_30px_rgba(0,229,255,0.6)] hover:-translate-y-1">
                   {t('hero.restaurantBannerBtn')}
                 </a>
               </div>
-            </div>
+            </motion.div>
             
             {/* Free Audit Magnet */}
-            <div className="mt-6 bg-blue-50/50 backdrop-blur-sm border border-blue-100 p-6 rounded-3xl text-left flex flex-col md:flex-row items-center gap-6">
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.6 }}
+              className="mt-6 bg-blue-50/50 backdrop-blur-sm border border-blue-100 p-6 rounded-3xl text-left flex flex-col md:flex-row items-center gap-6"
+            >
               <div className="flex-1">
-                <h3 className="text-lg font-bold text-primary mb-1">
-                  🔍 {t('hero.auditTitle')}
+                <h3 className="text-lg font-bold text-primary mb-1 flex items-center gap-2">
+                  <Search size={18} /> {t('hero.auditTitle')}
                 </h3>
                 <p className="text-gray-600 text-sm font-medium">
                   {t('hero.auditDesc')}
@@ -77,7 +87,7 @@ export default function Hero() {
               <a href="#contact" className="text-primary font-bold hover:underline whitespace-nowrap flex items-center gap-1 text-sm">
                 {t('hero.auditBtn')}
               </a>
-            </div>
+            </motion.div>
           </motion.div>
           
           {/* Floating tech badges */}

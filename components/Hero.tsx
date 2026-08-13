@@ -28,7 +28,7 @@ export default function Hero() {
             </div>
             
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-extrabold tracking-tight mb-6 leading-tight text-foreground">
-              {t('hero.title1')} {t('hero.title2')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-neon drop-shadow-sm">{t('hero.title3')}</span>
+              {t('hero.title1')} {t('hero.title2')} <span className="text-primary">{t('hero.title3')}</span>
             </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-medium">

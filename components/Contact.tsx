@@ -12,7 +12,7 @@ export default function Contact() {
     businessName: '',
     email: '',
     phone: '',
-    country: '',
+    hasWebsite: '',
     businessType: '',
     projectType: '',
     message: ''
@@ -38,7 +38,7 @@ export default function Contact() {
         businessName: '',
         email: '',
         phone: '',
-        country: '',
+        hasWebsite: '',
         businessType: '',
         projectType: '',
         message: ''
@@ -90,7 +90,7 @@ export default function Contact() {
 
                 {/* Email Direct Option */}
                 <a 
-                  href="mailto:contact@ysm-technologies.com"
+                  href="mailto:info@ysm-technologies.com"
                   className="flex items-center gap-4 p-4 rounded-xl glass-panel hover:shadow-md hover:-translate-y-1 transition-all group"
                 >
                   <div className="w-12 h-12 bg-blue-50 text-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -98,7 +98,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="font-bold text-foreground">{t('contact.emailTitle')}</h4>
-                    <p className="text-sm text-gray-500 font-medium">contact@ysm-technologies.com</p>
+                    <p className="text-sm text-gray-500 font-medium">info@ysm-technologies.com</p>
                   </div>
                 </a>
               </div>
@@ -186,6 +186,46 @@ export default function Contact() {
                 </div>
 
                 {/* 3. Prequalification Dropdowns */}
+                
+                <div className="space-y-3">
+                  <label className="block text-sm font-bold text-gray-700">{t('contact.hasWebsite')}</label>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input 
+                        type="radio" 
+                        name="hasWebsite" 
+                        value="Yes" 
+                        onChange={handleChange}
+                        className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
+                        required
+                      />
+                      <span className="text-sm font-medium text-gray-700">{t('contact.hasWebsiteYes')}</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input 
+                        type="radio" 
+                        name="hasWebsite" 
+                        value="No" 
+                        onChange={handleChange}
+                        className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
+                        required
+                      />
+                      <span className="text-sm font-medium text-gray-700">{t('contact.hasWebsiteNo')}</span>
+                    </label>
+                    <label className="flex items-center gap-2 cursor-pointer">
+                      <input 
+                        type="radio" 
+                        name="hasWebsite" 
+                        value="Not sure" 
+                        onChange={handleChange}
+                        className="w-4 h-4 text-primary focus:ring-primary border-gray-300"
+                        required
+                      />
+                      <span className="text-sm font-medium text-gray-700">{t('contact.hasWebsiteNotSure')}</span>
+                    </label>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="businessType" className="block text-sm font-bold text-gray-700 mb-2">{t('contact.businessType')}</label>
@@ -208,7 +248,7 @@ export default function Contact() {
                     </select>
                   </div>
                   <div>
-                    <label htmlFor="projectType" className="block text-sm font-bold text-gray-700 mb-2">{t('contact.projectType')}</label>
+                    <label htmlFor="projectType" className="block text-sm font-bold text-gray-700 mb-2">{t('contact.biggestChallenge')}</label>
                     <select 
                       id="projectType" 
                       name="projectType"
@@ -217,14 +257,15 @@ export default function Contact() {
                       required
                       className="w-full px-4 py-3 bg-white border border-gray-200 rounded-xl focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all font-medium text-gray-700"
                     >
-                      <option value="" disabled>Select project type</option>
-                      <option value="new_website">{t('contact.ptOption1')}</option>
-                      <option value="redesign">{t('contact.ptOption2')}</option>
-                      <option value="mobile_app">{t('contact.ptOption3')}</option>
-                      <option value="web_app">{t('contact.ptOption4')}</option>
-                      <option value="custom_software">{t('contact.ptOption5')}</option>
-                      <option value="marketing">{t('contact.ptOption6')}</option>
-                      <option value="other">{t('contact.ptOption7')}</option>
+                      <option value="" disabled>Select option</option>
+                      <option value="customers">{t('contact.chCustomers')}</option>
+                      <option value="website">{t('contact.chWebsite')}</option>
+                      <option value="booking">{t('contact.chBooking')}</option>
+                      <option value="menu">{t('contact.chMenu')}</option>
+                      <option value="google">{t('contact.chGoogle')}</option>
+                      <option value="ordering">{t('contact.chOrdering')}</option>
+                      <option value="social">{t('contact.chSocial')}</option>
+                      <option value="other">{t('contact.chOther')}</option>
                     </select>
                   </div>
                 </div>

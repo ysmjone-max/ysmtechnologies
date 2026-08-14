@@ -84,9 +84,11 @@ export default function Hero() {
                   {t('hero.auditDesc')}
                 </p>
               </div>
-              <a href="#contact" className="text-primary font-bold hover:underline whitespace-nowrap flex items-center gap-1 text-sm">
-                {t('hero.auditBtn')}
-              </a>
+              <div className="w-full md:w-auto">
+                <a href="#contact" className="block w-full md:w-auto text-center px-6 py-3 bg-white text-primary border border-blue-200 font-bold rounded-xl hover:bg-blue-50 transition-all whitespace-nowrap shadow-sm hover:shadow-md hover:-translate-y-1">
+                  {t('hero.auditBtn')}
+                </a>
+              </div>
             </motion.div>
           </motion.div>
         </div>

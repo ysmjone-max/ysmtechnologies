@@ -31,15 +31,15 @@ export default function Hero() {
               {t('hero.title1')} {t('hero.title2')} <span className="text-primary">{t('hero.title3')}</span>
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto font-medium">
+            <p className="text-lg sm:text-xl md:text-2xl text-foreground/80 mb-10 max-w-2xl mx-auto font-semibold">
               {t('hero.subtitle')}
             </p>
             
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="#contact" className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-glow-blue hover:-translate-y-1">
-                {t('hero.letsTalk')} <ArrowRight size={18} />
+              <a href="#contact" className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-glow-blue hover:-translate-y-1 text-lg">
+                {t('hero.letsTalk')} <ArrowRight size={20} />
               </a>
-              <a href="#portfolio" className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 glass-panel text-foreground font-bold rounded-full hover:border-primary/50 hover:bg-white/60 transition-all hover:-translate-y-1">
+              <a href="#portfolio" className="w-full sm:w-auto px-6 py-3 sm:px-8 sm:py-4 glass-panel text-foreground font-bold rounded-full hover:border-primary/50 hover:bg-white/60 transition-all hover:-translate-y-1 text-base opacity-90">
                 {t('hero.viewWork')}
               </a>
             </div>
@@ -88,23 +88,6 @@ export default function Hero() {
                 {t('hero.auditBtn')}
               </a>
             </motion.div>
-          </motion.div>
-          
-          {/* Floating tech badges */}
-          <motion.div 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8, duration: 1 }}
-            className="mt-12 md:mt-16 pb-12 flex justify-center gap-8 md:gap-12 text-gray-400"
-          >
-            <div className="flex flex-col items-center gap-2 hover:text-primary transition-colors cursor-default">
-              <Code size={28} />
-              <span className="text-sm font-bold tracking-wide">{t('hero.webDev')}</span>
-            </div>
-            <div className="flex flex-col items-center gap-2 hover:text-primary transition-colors cursor-default">
-              <Smartphone size={28} />
-              <span className="text-sm font-bold tracking-wide">{t('hero.androidApps')}</span>
-            </div>
           </motion.div>
         </div>
       </section>

@@ -9,49 +9,49 @@ export default function RestaurantsPageContent() {
 
   const packages = [
     {
-      name: "YSM Restaurant Starter",
-      target: "For small cafés and new restaurants",
+      name: t('restaurants.pkg1Name'),
+      target: t('restaurants.pkg1Target'),
       features: [
-        "Modern, Responsive Website",
-        "Digital PDF Menu Integration",
-        "Google Business Profile Setup",
-        "WhatsApp Contact Button",
-        "Basic SEO (Local Search)",
-        "Mobile-First Design"
+        t('restaurants.pkg1Feat1'),
+        t('restaurants.pkg1Feat2'),
+        t('restaurants.pkg1Feat3'),
+        t('restaurants.pkg1Feat4'),
+        t('restaurants.pkg1Feat5'),
+        t('restaurants.pkg1Feat6')
       ]
     },
     {
-      name: "Restaurant Growth",
-      target: "For established restaurants looking to scale",
+      name: t('restaurants.pkg2Name'),
+      target: t('restaurants.pkg2Target'),
       popular: true,
       features: [
-        "Everything in Starter, plus:",
-        "Interactive Digital Menu (QR Code ready)",
-        "Table Reservation System (Email/WhatsApp)",
-        "Multilingual Support (2 Languages)",
-        "Social Media Integration",
-        "Performance Analytics Setup"
+        t('restaurants.pkg2Feat1'),
+        t('restaurants.pkg2Feat2'),
+        t('restaurants.pkg2Feat3'),
+        t('restaurants.pkg2Feat4'),
+        t('restaurants.pkg2Feat5'),
+        t('restaurants.pkg2Feat6')
       ]
     },
     {
-      name: "Restaurant Pro",
-      target: "For high-volume restaurants and chains",
+      name: t('restaurants.pkg3Name'),
+      target: t('restaurants.pkg3Target'),
       features: [
-        "Everything in Growth, plus:",
-        "Custom Online Ordering System",
-        "Payment Gateway Integration",
-        "Customer Account & Loyalty Features",
-        "Multilingual Support (Up to 5 Languages)",
-        "Advanced Local SEO Strategy"
+        t('restaurants.pkg3Feat1'),
+        t('restaurants.pkg3Feat2'),
+        t('restaurants.pkg3Feat3'),
+        t('restaurants.pkg3Feat4'),
+        t('restaurants.pkg3Feat5'),
+        t('restaurants.pkg3Feat6')
       ]
     }
   ]
 
   const features = [
-    { icon: <QrCode className="text-primary" size={32} />, title: "QR Digital Menus", desc: "Easily update your menu items, prices, and specials without printing costs." },
-    { icon: <Smartphone className="text-primary" size={32} />, title: "Mobile Optimized", desc: "Over 80% of restaurant searches happen on mobile. We ensure your site looks perfect on all devices." },
-    { icon: <Globe2 className="text-primary" size={32} />, title: "Multilingual Support", desc: "Serve a diverse customer base with native language support for English, Italian, German, Amharic, and Tigrinya." },
-    { icon: <MessageSquare className="text-primary" size={32} />, title: "WhatsApp Integration", desc: "Let customers book tables or ask questions directly through WhatsApp." }
+    { icon: <QrCode className="text-primary" size={32} />, title: t('restaurants.feat1Title'), desc: t('restaurants.feat1Desc') },
+    { icon: <Smartphone className="text-primary" size={32} />, title: t('restaurants.feat2Title'), desc: t('restaurants.feat2Desc') },
+    { icon: <Globe2 className="text-primary" size={32} />, title: t('restaurants.feat3Title'), desc: t('restaurants.feat3Desc') },
+    { icon: <MessageSquare className="text-primary" size={32} />, title: t('restaurants.feat4Title'), desc: t('restaurants.feat4Desc') }
   ]
 
   return (
@@ -59,12 +59,12 @@ export default function RestaurantsPageContent() {
       {/* Hero Section */}
       <section className="relative mt-12 md:mt-16 lg:mt-20 pt-16 pb-16 md:pt-16 md:pb-24 lg:pt-20 lg:pb-32 overflow-hidden bg-slate-900 text-white">
         {/* Background elements */}
-        <div className="absolute top-0 right-0 w-full h-full bg-[url('/habesha-food.jpg')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
+        <div className="absolute top-0 right-0 w-full h-full bg-[url('/demo-bg.jpg')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-900/90 to-background"></div>
         
         <div className="container mx-auto px-5 sm:px-6 md:px-8 lg:px-12 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/20 border border-primary/30 text-primary-neon text-sm font-bold uppercase tracking-wider mb-8 backdrop-blur-sm">
-            <Utensils size={16} /> Restaurant Solutions
+            <Utensils size={16} /> {t('restaurants.solutionTag')}
           </div>
           
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading font-black tracking-tight mb-8 leading-tight drop-shadow-lg">
@@ -118,7 +118,7 @@ export default function RestaurantsPageContent() {
                 <div className="w-3 h-3 rounded-full bg-green-400"></div>
                 <div className="ml-4 bg-white px-4 py-1 rounded text-xs text-gray-500 w-64 text-left font-mono">ysmjone-max.github.io/Habesharestorant.de/</div>
               </div>
-              <div className="absolute inset-0 mt-10 bg-[url('https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1600&auto=format&fit=crop')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105">
+              <div className="absolute inset-0 mt-10 bg-[url('/demo-mobile-bg.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105">
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/70 to-transparent flex flex-col items-center justify-end p-8 md:p-12 text-white text-center">
                   <h3 className="text-3xl md:text-5xl font-heading font-black mb-4 text-primary-neon drop-shadow-md">Habesha Restaurant Demo</h3>
                  <a 
@@ -288,7 +288,7 @@ export default function RestaurantsPageContent() {
                     : 'bg-gray-100 text-foreground hover:bg-primary hover:text-white'
                   }`}
                 >
-                  Request Details <ArrowRight size={18} />
+                  {t('restaurants.reqDetails')} <ArrowRight size={18} />
                 </Link>
               </div>
             ))}

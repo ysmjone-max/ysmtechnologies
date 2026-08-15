@@ -67,20 +67,20 @@ export default function Portfolio() {
 
         {/* FEATURED RESTAURANT PROJECT */}
         <div className="mb-16 rounded-[2rem] overflow-hidden shadow-2xl relative border border-gray-200 group">
-          <div className="absolute inset-0 bg-[url('/habesha-food.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105 z-0"></div>
+          <div className="absolute inset-0 bg-[url('/demo-bg.jpg')] bg-cover bg-center transition-transform duration-700 group-hover:scale-105 z-0"></div>
           <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-900/90 to-transparent z-10"></div>
           
           <div className="relative z-20 p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-10">
             <div className="flex-1 text-white">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-orange-500/20 text-orange-400 text-xs font-bold uppercase tracking-wider mb-6 border border-orange-500/30">
-                🍽️ FEATURED RESTAURANT PROJECT
+                🍽️ {t('portfolio.featuredTag')}
               </div>
               <h3 className="text-4xl md:text-5xl font-heading font-black mb-6 leading-tight drop-shadow-md">
-                What if your restaurant looked like this online?
+                {t('portfolio.featuredTitle')}
               </h3>
               
               <div className="flex flex-wrap gap-3 mb-10">
-                {["Menu", "Reservation", "WhatsApp", "Google Maps", "Multilingual"].map((item, i) => (
+                {[t('portfolio.featMenu'), t('portfolio.featRes'), t('portfolio.featWa'), t('portfolio.featMap'), t('portfolio.featLang')].map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm font-bold bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/10">
                     <CheckCircle2 size={16} className="text-primary-neon" /> {item}
                   </div>
@@ -94,13 +94,13 @@ export default function Portfolio() {
                   rel="noopener noreferrer"
                   className="px-8 py-4 bg-primary text-white font-bold rounded-full hover:bg-primary-dark transition-all flex items-center justify-center gap-2 shadow-glow-blue hover:-translate-y-1 text-center"
                 >
-                  View Restaurant Demo <ExternalLink size={18} />
+                  {t('portfolio.viewDemo')} <ExternalLink size={18} />
                 </a>
                 <a 
                   href="#contact"
                   className="px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold rounded-full hover:bg-white/20 transition-all text-center hover:-translate-y-1"
                 >
-                  Get a Free Website Review
+                  {t('portfolio.freeReview')}
                 </a>
               </div>
             </div>
@@ -112,10 +112,10 @@ export default function Portfolio() {
                   <div className="w-1/3 h-4 bg-gray-900 rounded-b-xl"></div>
                 </div>
                 {/* Background image mimicking the mobile site */}
-                <div className="absolute inset-0 bg-[url('/habesha-food.jpg')] bg-cover bg-center opacity-80"></div>
+                <div className="absolute inset-0 bg-[url('/demo-mobile-bg.jpg')] bg-cover bg-center opacity-80"></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent flex flex-col justify-end p-6">
-                  <div className="w-full h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm mb-2 shadow-lg">Book a Table</div>
-                  <div className="w-full h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">Order via WhatsApp</div>
+                  <div className="w-full h-10 bg-orange-600 rounded-full flex items-center justify-center text-white font-bold text-sm mb-2 shadow-lg">{t('portfolio.fakeBtn1')}</div>
+                  <div className="w-full h-10 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-lg">{t('portfolio.fakeBtn2')}</div>
                 </div>
               </div>
             </div>
@@ -125,7 +125,7 @@ export default function Portfolio() {
         {/* OTHER PROJECTS */}
         <div className="flex items-center gap-4 mb-8">
           <div className="h-px bg-gray-200 flex-1"></div>
-          <h3 className="text-xl font-bold text-gray-400 uppercase tracking-widest">Other Client Projects</h3>
+          <h3 className="text-xl font-bold text-gray-400 uppercase tracking-widest">{t('portfolio.otherProjects')}</h3>
           <div className="h-px bg-gray-200 flex-1"></div>
         </div>
 

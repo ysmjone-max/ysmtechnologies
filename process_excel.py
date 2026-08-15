@@ -1,77 +1,118 @@
 import pandas as pd
 import requests
 import time
-import urllib3
-from googlesearch import search
+from duckduckgo_search import DDGS
+import urllib.parse
+import re
 
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+excel_file = 'YSM_Habesha_Restaurant_WW_List_By_Country.xlsx'
+output_file = 'YSM_Habesha_Prospect_List_Final.xlsx'
 
-file_path = r'C:\Users\pc\Downloads\YSM Habesha Prospect List.xlsx'
-df = pd.read_excel(file_path, sheet_name='All Prospects', header=3)
-
-# Define bad domains to ignore when searching
-bad_domains = ['facebook.com', 'instagram.com', 'yelp', 'tripadvisor', 'google.com', 'foursquare', 'ubereats', 'deliveroo', 'wolt', 'thuisbezorgd', 'just-eat', 'doordash', 'opentable', 'thefork', 'yellowpages', 'restaurantguru', 'happycow', 'sluurpy']
-
-def is_valid_website(url):
-    url = url.lower()
-    for bd in bad_domains:
-        if bd in url:
-            return False
-    return True
-
-def search_website(name, city):
-    query = f'"{name}" {city} restaurant website'
+def check_url(url):
+    if not url or pd.isna(url):
+        return False, "No URL"
+    if not url.startswith('http'):
+        url = 'http://' + url
     try:
-        results = search(query, num_results=5)
+        response = requests.get(url, timeout=5, headers={'User-Agent': 'Mozilla/5.0'})
+        if response.status_code == 200:
+            return True, "Active"
+        else:
+            return False, f"Status {response.status_code}"
+    except Exception as e:
+        return False, "Error/Down"
+
+def find_website(name, city):
+    if pd.isna(name) or pd.isna(city): return None
+    query = f"{name} {city} restaurant website"
+    try:
+        results = DDGS().text(query, max_results=2)
         for r in results:
-            if is_valid_website(r):
-                return r
-    except Exception as e:
+            url = r['href']
+            # Ignore directories
+            ignored = ['yelp.', 'tripadvisor.', 'facebook.', 'grubhub.', 'doordash.', 'ubereats.', 'seamless.', 'postmates.', 'yellowpages.']
+            if not any(ig in url.lower() for ig in ignored):
+                return url
+    except Exception:
         pass
-    return "Not found"
+    return None
 
-def check_status(url):
-    if not url or url == "Not found" or "Not found" in str(url):
-        return "No Website Found"
+def analyze_prospect(row):
+    if pd.isna(row.get('Business Name')) or pd.isna(row.get('Phone')):
+        return ""
     
-    if not str(url).startswith('http'):
-        url = 'http://' + str(url)
-        
+    website = str(row.get('Website', ''))
+    name = row.get('Business Name', '')
+    city = row.get('City', '')
+    reviews = row.get('# Reviews', 0)
     try:
-        r = requests.get(url, timeout=5, verify=False, headers={'User-Agent': 'Mozilla/5.0'})
-        return f"Alive ({r.status_code})"
-    except requests.exceptions.Timeout:
-        return "Timeout"
-    except requests.exceptions.ConnectionError:
-        return "Connection Error"
-    except Exception as e:
-        return "Error"
+        reviews = float(reviews)
+    except:
+        reviews = 0
 
-statuses = []
-updated_websites = []
+    if 'est.' in website.lower() or website.lower() == 'not found' or website.lower() == 'nan':
+        if 'likely has site' in website.lower() or reviews > 100:
+            time.sleep(1) # rate limit
+            found_url = find_website(name, city)
+            if found_url:
+                is_active, msg = check_url(found_url)
+                if is_active:
+                    return f"Website found ({found_url}) - Active. Pitch Digital Audit."
+                else:
+                    return f"Website found ({found_url}) but {msg}. Pitch Fix/Rebuild."
+            else:
+                return "Prime prospect: High reviews but no website found. Pitch New Website."
+        else:
+            return "No website found. Pitch New Website."
+    else:
+        is_active, msg = check_url(website)
+        if is_active:
+            return f"Active website ({website}). Pitch Digital Audit."
+        else:
+            return f"Website ({website}) is down ({msg}). Urgent Pitch: Fix/Rebuild."
 
-print("Processing prospects...")
-for index, row in df.iterrows():
-    name = row['Business Name']
-    city = row['City']
-    website = str(row['Website']).strip()
+print("Loading excel file...")
+xls = pd.ExcelFile(excel_file)
+all_dfs = []
+
+print("Processing USA...")
+df_usa = pd.read_excel(excel_file, sheet_name='USA', header=3)
+df_usa['Country'] = 'USA'
+df_usa = df_usa.dropna(how='all')
+
+analyses = []
+total = len(df_usa)
+for idx, row in df_usa.iterrows():
+    if idx % 10 == 0:
+        print(f"USA Progress: {idx}/{total}")
+    analyses.append(analyze_prospect(row))
+
+df_usa['Analysis'] = analyses
+all_dfs.append(df_usa)
+
+print("Processing other countries...")
+for sheet in xls.sheet_names:
+    if sheet in ['Summary', 'USA']: continue
+    print(f"Reading {sheet}...")
+    df_other = pd.read_excel(excel_file, sheet_name=sheet, header=3)
+    df_other['Country'] = sheet
+    df_other = df_other.dropna(how='all')
     
-    if website == 'nan' or "not found" in website.lower():
-        website = search_website(name, city)
-        time.sleep(1.5) # Google rate limits can be strict
-    
-    status = check_status(website)
-    
-    updated_websites.append(website)
-    statuses.append(status)
-    print(f"{index + 1}/{len(df)}: {name} -> {website} -> {status}")
+    if 'Opportunity Notes' in df_other.columns:
+        df_other['Analysis'] = df_other['Opportunity Notes']
+    else:
+        df_other['Analysis'] = 'Pending Analysis'
+    all_dfs.append(df_other)
 
-df['Website'] = updated_websites
-df['Website Status'] = statuses
+print("Concatenating all data...")
+final_df = pd.concat(all_dfs, ignore_index=True)
+cols = [c for c in final_df.columns if not str(c).startswith('Unnamed:')]
+if 'Country' in cols:
+    cols.insert(0, cols.pop(cols.index('Country')))
+if 'Analysis' in cols:
+    cols.append(cols.pop(cols.index('Analysis')))
 
-out_path = r'C:\Users\pc\OneDrive\Documents\YSM\YSM_Habesha_Prospect_List_Edited.xlsx'
-
-with pd.ExcelWriter(out_path, engine='openpyxl') as writer:
-    df.to_excel(writer, index=False, sheet_name='All Prospects Evaluated')
-
-print("Saved to", out_path)
+final_df = final_df[cols]
+print("Saving to Excel...")
+final_df.to_excel(output_file, index=False)
+print(f"Done! Saved comprehensive dataset to {output_file}")
